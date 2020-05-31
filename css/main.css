@@ -143,7 +143,7 @@ a {
 	padding-top: 5px;
 }
 #tree{
-	height: calc( 100% - 50px );
+	height: calc( 90% - 50px );
 	overflow: auto;
 	margin-top: 50px;
 }
@@ -393,11 +393,14 @@ table td {
 }
 /* footer */
 #footer{
-	font-size: 14px;
+	font-size: 12px;
 	height: 50px;
-	background-color: #60281e;
-	color: #dfb7b7;
+	background-color: #ffffff00;
+    color: #dfdfdf;
 	text-align: center;
+	padding:0px;
+	padding-top:5%;
+	margin-top:-3%;
 }
 #footer a {
     color: #fff;
