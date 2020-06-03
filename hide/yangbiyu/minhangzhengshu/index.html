@@ -1,126 +1,59 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <!-- saved from url=(0031)http://mh.sowin.com/code!cer.do -->
-<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html xmlns="http://www.w3.org/1999/xhtml">
 
-<title>证书信息</title>
-<script src="./index_res/jquery-1.8.2.min.js" type="text/javascript"></script>
-<script src="./index_res/qrcode.min.js" type="text/javascript"></script>
-<link href="./index_res/screen.css" rel="stylesheet" type="text/css" media="screen">
-<script type="text/javascript">
-        function CreateQRCode(element, data, w, h) {
-            var qrcode = new QRCode(element, {                
-                text: data,
-                width: w,
-                height: h,
-                colorLight: "rgba(0, 0, 0, 0)",
-                correctLevel: QRCode.CorrectLevel.L
-            });
-        }
-</script>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
+
+  <title>证书信息</title>
+  <script type="text/javascript" src="../../../lib/jquery-3.4.1.min.js" ></script> 
+  <script type="text/javascript" src="../../../js/BASE64.js" ></script>
+
+<style type="text/css">
+  body{
+    /*margin:0px;
+    padding:0px;*/
+    background-color:lightgray;
+}
+.pageArea,.pageArea2{
+    position:relative;
+    width:718px;
+    height:510px;
+    background:url("../Images/background.gif") no-repeat left top;
+    border:1px solid gray;
+    margin:5px auto;
+    z-index:-2;
+}
+
+.pageArea2{
+    background:url("../Images/background2.gif") no-repeat left top;
+    z-index:-2;
+}
+
+.data{
+	position:absolute;
+	font-family: "仿宋";
+	font-size: 12pt;
+	color: #000000;
+        z-index:100;
+}
+
+.img{
+	position:absolute;
+	z-index:-1;
+}
+</style>
 <meta name="generator" content="Hexo 4.2.1"></head>
 <body style="background-color:#daecf6;">
-<!----模板内容开始---->
-
-<table width="500" border="1" align="center" cellpadding="8" bgcolor="#FFFFFF" bordercolor="#999999" style="font-family: Microsoft YaHei, Verdana, Arial, Helvetica, sans-serif; font-size:14px;">
-  
-  
-  
-  <tbody><tr>
-    <td width="200" align="right">姓名：</td>
-    <td>杨碧玉 </td>
-  </tr>
-  <tr>
-    <td align="right">性别：</td>
-    <td>女</td>
-  </tr>
-  <tr>
-    <td align="right">出生日期：</td>
-	
-	
-	<td>1997 年 04 月 13 日 </td>
-	
-  </tr>
-  <tr>
-    <td align="right">证书编号：</td>
-    <td>1666003005501492</td>
-  </tr>
-  <tr>
-    <td align="right">身份证号：</td>
-    <td>130427199704136742</td>
-  </tr>
-  <tr>
-    <td align="right">职业（工种）及等级：</td>
-    <td>民航安全检查员五级  
-	</td>
-  </tr>
-  <tr>
-    <td align="right">理论知识考试成绩：</td>
-    <td>
-	60.0 
-	
-	
-	
-	
-	
-	</td>
-  </tr>
-  <tr>
-    <td align="right">操作技能考核成绩：</td>
-    <td>
-	90.0 
-	
-	
-	
-	
-	
-	</td>
-  </tr>
-  
-  
-  
-  <tr>
-    <td align="right">评定成绩：</td>
-    <td>合格</td>
-  </tr>
-  
-  <tr>
-    <td align="right">颁证日期：</td>
-    <td>2019-07-19</td>
-  </tr>
-  <tr>
-    <td align="right">发证单位：</td>
-    <td>民航局职业技能鉴定指导中心
-</td>
-  </tr>
-  <tr>
-    <td align="right">证书流水码所属号段：</td>
-    <td>
-			
-	
-			
-	
-			<span>
-			      <b>43381001</b> - <b>43401000 </b>
-			</span>
-			
-			
-			
-			
-	<br>		
-				
-			
-	
-			
-	   
-			
-	&nbsp;
-	</td>
-  </tr>
-</tbody></table>
 
 
 
-
-<!----模板内容结束---->
-
-</body><div id="translate-button" style="background-color: white; box-shadow: rgb(221, 221, 221) 0px 0px 2px 2px; display: none;"><img src="data:image/png;base64,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"></div></html>
+</body>
+<script>
+  var bodyContent="PHRhYmxlIHdpZHRoPSI1MDAiIGJvcmRlcj0iMSIgYWxpZ249ImNlbnRlciIgY2VsbHBhZGRpbmc9IjgiIGJnY29sb3I9IiNGRkZGRkYiIGJvcmRlcmNvbG9yPSIjOTk5OTk5IgogICAgc3R5bGU9ImZvbnQtZmFtaWx5OiBNaWNyb3NvZnQgWWFIZWksIFZlcmRhbmEsIEFyaWFsLCBIZWx2ZXRpY2EsIHNhbnMtc2VyaWY7IGZvbnQtc2l6ZToxNHB4OyI+CiAgICA8dGJvZHk+CiAgICAgICAgPHRyPgogICAgICAgICAgICA8dGQgd2lkdGg9IjIwMCIgYWxpZ249InJpZ2h0Ij7lp5PlkI3vvJo8L3RkPgogICAgICAgICAgICA8dGQ+5p2o56Kn546JIDwvdGQ+CiAgICAgICAgPC90cj4KICAgICAgICA8dHI+CiAgICAgICAgICAgIDx0ZCBhbGlnbj0icmlnaHQiPuaAp+WIq++8mjwvdGQ+CiAgICAgICAgICAgIDx0ZD7lpbM8L3RkPgogICAgICAgIDwvdHI+CiAgICAgICAgPHRyPgogICAgICAgICAgICA8dGQgYWxpZ249InJpZ2h0Ij7lh7rnlJ/ml6XmnJ/vvJo8L3RkPgogICAgICAgICAgICA8dGQ+MTk5NyDlubQgMDQg5pyIIDEzIOaXpSA8L3RkPgogICAgICAgIDwvdHI+CiAgICAgICAgPHRyPgogICAgICAgICAgICA8dGQgYWxpZ249InJpZ2h0Ij7or4HkuabnvJblj7fvvJo8L3RkPgogICAgICAgICAgICA8dGQ+MTY2NjAwMzAwNTUwMTQ5MjwvdGQ+CiAgICAgICAgPC90cj4KICAgICAgICA8dHI+CiAgICAgICAgICAgIDx0ZCBhbGlnbj0icmlnaHQiPui6q+S7veivgeWPt++8mjwvdGQ+CiAgICAgICAgICAgIDx0ZD4xMzA0MjcxOTk3MDQxMzY3NDI8L3RkPgogICAgICAgIDwvdHI+CiAgICAgICAgPHRyPgogICAgICAgICAgICA8dGQgYWxpZ249InJpZ2h0Ij7ogYzkuJrvvIjlt6Xnp43vvInlj4rnrYnnuqfvvJo8L3RkPgogICAgICAgICAgICA8dGQ+5rCR6Iiq5a6J5YWo5qOA5p+l5ZGY5LqU57qnCiAgICAgICAgICAgIDwvdGQ+CiAgICAgICAgPC90cj4KICAgICAgICA8dHI+CiAgICAgICAgICAgIDx0ZCBhbGlnbj0icmlnaHQiPueQhuiuuuefpeivhuiAg+ivleaIkOe7qe+8mjwvdGQ+CiAgICAgICAgICAgIDx0ZD4KICAgICAgICAgICAgICAgIDYwLjAKICAgICAgICAgICAgPC90ZD4KICAgICAgICA8L3RyPgogICAgICAgIDx0cj4KICAgICAgICAgICAgPHRkIGFsaWduPSJyaWdodCI+5pON5L2c5oqA6IO96ICD5qC45oiQ57up77yaPC90ZD4KICAgICAgICAgICAgPHRkPgogICAgICAgICAgICAgICAgOTAuMAogICAgICAgICAgICA8L3RkPgogICAgICAgIDwvdHI+CiAgICAgICAgPHRyPgogICAgICAgICAgICA8dGQgYWxpZ249InJpZ2h0Ij7or4TlrprmiJDnu6nvvJo8L3RkPgogICAgICAgICAgICA8dGQ+5ZCI5qC8PC90ZD4KICAgICAgICA8L3RyPgoKICAgICAgICA8dHI+CiAgICAgICAgICAgIDx0ZCBhbGlnbj0icmlnaHQiPumigeivgeaXpeacn++8mjwvdGQ+CiAgICAgICAgICAgIDx0ZD4yMDE5LTA3LTE5PC90ZD4KICAgICAgICA8L3RyPgogICAgICAgIDx0cj4KICAgICAgICAgICAgPHRkIGFsaWduPSJyaWdodCI+5Y+R6K+B5Y2V5L2N77yaPC90ZD4KICAgICAgICAgICAgPHRkPuawkeiIquWxgOiBjOS4muaKgOiDvemJtOWumuaMh+WvvOS4reW/gwogICAgICAgICAgICA8L3RkPgogICAgICAgIDwvdHI+CiAgICAgICAgPHRyPgogICAgICAgICAgICA8dGQgYWxpZ249InJpZ2h0Ij7or4HkuabmtYHmsLTnoIHmiYDlsZ7lj7fmrrXvvJo8L3RkPgogICAgICAgICAgICA8dGQ+CiAgICAgICAgICAgICAgICA8c3Bhbj4KICAgICAgICAgICAgICAgICAgICA8Yj40MzM4MTAwMTwvYj4gLSA8Yj40MzQwMTAwMCA8L2I+CiAgICAgICAgICAgICAgICA8L3NwYW4+CiAgICAgICAgICAgICAgICA8YnI+CiAgICAgICAgICAgICAgICAmbmJzcDsKICAgICAgICAgICAgPC90ZD4KICAgICAgICA8L3RyPgogICAgPC90Ym9keT4KPC90YWJsZT4=";
+  var b=new BASE64();
+  var result=b.decode(bodyContent);
+  $("body").append(result);
+</script>
+</html>
