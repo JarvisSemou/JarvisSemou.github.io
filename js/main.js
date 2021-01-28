@@ -7,7 +7,19 @@ $(document).ready(function () {
 	switchTreeOrIndex();
 	scrollToTop();
 	pageScroll();
+	fixPicPath();
 });
+//修复图片地址
+function fixPicPath(){
+	//检查选择的元素
+	$("body").find("img[src][alt]").each(
+		function(){
+			var oldURI=decodeURI($(this).attr("src"))
+			var mFileName=oldURI.split("_pic")[0]
+			$(this).attr("src",encodeURI("./"+mFileName+"/"+oldURI))
+		}
+	);
+}
 // 页面滚动
 function pageScroll(){
     var start_hight = 0;
@@ -149,7 +161,14 @@ function pjaxLoad(){
 			$("#tree .active").removeClass("active");
 			var title = $("#article-title").text().trim();
 			if ( title.length ) {
-				var searchResult = $("#tree li.file").find("a:contains('" + title + "')");
+				//因为 markdown 的 title 不再与 markdown 关联，所以 find("a:contains('" + title + "')") 不再能找到对应元素
+				//var searchResult = $("#tree li.file").find("a:contains('" + title + "')");
+				//如果改了永久路径的格式，记得修改这里的代码，适配目录树的文章内部目录的显示
+				var nowUrl=decodeURI(window.location.href);
+				var nowSplitUrlArray=nowUrl.split("/");
+				//var nowFileName=nowSplitUrlArray[nowSplitUrlArray.length-1];
+				var nowFileName=nowSplitUrlArray[nowSplitUrlArray.length-1].split(".html")[0];
+				var searchResult = $("#tree li.file").find("a:contains('" + nowFileName + "')");
 				if ( searchResult.length ) {
 					$(".fa-minus-square-o").removeClass("fa-minus-square-o").addClass("fa-plus-square-o");
 					$("#tree ul").css("display", "none");
@@ -161,6 +180,7 @@ function pjaxLoad(){
 						}
 					}
 					searchResult[0].parentNode.classList.add("active");
+					fixPicPath()
 					showActiveTree($("#tree .active"), true) 
 				}
 				showArticleIndex();
